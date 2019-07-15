@@ -1,0 +1,48 @@
+body {
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: #fff5fb;
+  max-height: 100vh;
+}
+
+#main-container {
+  margin: 8vh 10vw;
+  height: 80vh;
+  width: 80vw;
+  background-color: #dbc4df;
+  border: none;
+  vertical-align: middle;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  color: #b88bad;
+  border-radius: 15px;
+  box-shadow: 0px 20px 5px #EFDEE9;
+  -webkit-box-shadow: 0px 20px 5px #EFDEE9;
+  -moz-box-shadow: 0px 20px 5px #EFDEE9;
+  position: relative;
+}
+
+#main-container .v-center {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+#main-container label {
+  font-size: 1.5rem;
+}
+
+.footer {
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
+}
+
+.footer .footer-text {
+  color: #b88bad;
+  font-size: 20px;
+}
+/*# sourceMappingURL=main.css.map */
