@@ -11,12 +11,20 @@ $(document).ready(function() {
 
     $('#hex').on('change', function(event) {
         event.preventDefault();
-        console.log("Here");
         var hex = $('#hex').val();
         console.log(hex);
-        console.log(hexToRgb(hex));
-        $('#rgb').val("rgb(" + hexToRgb(hex).r + ", " + hexToRgb(hex).g + ", " + hexToRgb(hex).b + ")");
-        $('#main-container').css("background-color", hex);
+        if (hex.length > 3) {
+            if (hex.charAt(0) != '#') {
+                hex = hex.substring(0, 0) + '#' + hex.substring(0);
+                console.log(hex);
+                //var output = a.substring(0, position) + b + a.substring(position);
+            }
+            console.log(hexToRgb(hex));
+            $('#hex').val(hex);
+            $('#rgb').val("rgb(" + hexToRgb(hex).r + ", " + hexToRgb(hex).g + ", " + hexToRgb(hex).b + ")");
+            $('#main-container').css("background-color", hex);
+        }
+
     });
 
     function hexToRgb(hex) {
